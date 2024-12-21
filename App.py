@@ -16,8 +16,8 @@ import matplotlib.pyplot as plt
 from azure.core.exceptions import HttpResponseError
 import requests
 
-ai_endpoint = st.secrets['AI_SERVICE_ENDPOINT']
-ai_key = st.secrets['AI_SERVICE_KEY']
+AI_SERVICE_ENDPOINT = "https://prof-10dec-mf-ai-services.cognitiveservices.azure.com/
+AI_SERVICE_KEY = "2ogSs0NIGTB797Q46ucYMcUXTsURvo0UhjLa5QVcQ6yDvbsROE41JQQJ99ALACYeBjFXJ3w3AAAEACOGtwrO"
 
 # Import namespaces
 from azure.cognitiveservices.vision.computervision import ComputerVisionClient
