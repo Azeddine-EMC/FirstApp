@@ -16,8 +16,10 @@ import matplotlib.pyplot as plt
 from azure.core.exceptions import HttpResponseError
 import requests
 
-ai_endpoint = st.secrets['https://prof-10dec-mf-ai-services.cognitiveservices.azure.com/']
-ai_key = st.secrets['2ogSs0NIGTB797Q46ucYMcUXTsURvo0UhjLa5QVcQ6yDvbsROE41JQQJ99ALACYeBjFXJ3w3AAAEACOGtwrO']
+AI_SERVICE_ENDPOINT = "https://prof-10dec-mf-ai-services.cognitiveservices.azure.com/"
+
+
+AI_SERVICE_KEY = "2ogSs0NIGTB797Q46ucYMcUXTsURvo0UhjLa5QVcQ6yDvbsROE41JQQJ99ALACYeBjFXJ3w3AAAEACOGtwrO"
 
 # Import namespaces
 from azure.cognitiveservices.vision.computervision import ComputerVisionClient
@@ -26,8 +28,8 @@ from azure.cognitiveservices.vision.computervision.models import OperationStatus
 from msrest.authentication import CognitiveServicesCredentials
 
 # Authenticate Azure AI Vision client
-credential = CognitiveServicesCredentials(ai_key) 
-cv_client = ComputerVisionClient(ai_endpoint, credential)
+credential = CognitiveServicesCredentials(AI_SERVICE_KEY) 
+cv_client = ComputerVisionClient(AI_SERVICE_ENDPOINT, credential)
 
 def AnalyzeImage(image_file):
     st.write('Analyzing', image_file.name)
