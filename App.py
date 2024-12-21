@@ -25,7 +25,7 @@ from azure.cognitiveservices.vision.computervision.models import VisualFeatureTy
 from msrest.authentication import CognitiveServicesCredentials
 
 # Authenticate Azure AI Vision client
-credential = CognitiveServicesCredentials(ai_key) 
+credential = CognitiveServicesCredentials(AI_SERVICE_KEY) 
 cv_client = ComputerVisionClient(ai_endpoint, credential)
 
 def AnalyzeImage(image_file):
